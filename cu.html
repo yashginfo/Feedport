@@ -14,21 +14,50 @@
     body{
       background-image: url('anime.jpg');
       background-size: cover;
-      height: 110vh;
+      height: 100vh;
+      background-position: center;
+            margin: 0;
+      display: flex;
+            flex-direction: column;
+            justify-content: center;
      
     }
+    .contact-form-container {
+            position: relative;
+            bottom: 15%;
+            top: 1%;
+            
+        }
 
-    #blur_cu{
-      position: relative;
-      bottom: 15%;
-      left: 60%;
-    
-    }
+        h1{
+
+position: relative;
+top: 15%;
+
+}
+
     #text_cu{
       font-weight: bold;
 
     }
+    .form-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .big_container{
+          position: absolute;
+          left: 45%;
 
+
+
+        }
+        @media (max-width: 576px) {
+            .contact-form-container {
+                bottom: 5%;
+            }
+        }
 
   </style>
   </head>
@@ -89,11 +118,11 @@
     <br>
     <br>
     
-      
+    <div class="big_container text-center">
       <h1 class="mt-5"  style="text-align: center; color:aliceblue ;">What's On Your Mind&#128172</h1><br><br><br><br>
-      <form id="blur_cu" style="height: 25%; width: 30%;"  >
+      <div class="contact-form-container">
+      <form class="form-container" >
       <div class="container text-light my-4 " id="text_cu">
-        <div class="form-CU col-12">
         <div class="form-group text-light mb-3 ">
           <label for="inputname">Your Full Name</label>
           <input type="text" class="form-control" id="inputname" placeholder="Enter Full Name Here" required="" autofocus="">
