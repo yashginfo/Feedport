@@ -15,27 +15,29 @@
        body{
         background-image: url('beautiful.jpg');
         background-size: cover;
-        height: 105vh;
+        height: 100vh;
        }
 
        .col-4{
+        height: 45%;
+        width: 45%;
         position: absolute;
-        top: 30%;
+        top: 40%;
         color: white;
   font-weight: bold;
   border: 1px solid;
   border-radius: 20px;
   z-index: 2;
-  padding: 20px;
+ padding: 5px;
        }
       
 
     </style>
   </head>
   <body>
-    <nav class="navbar top navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <img src="Tech logo_enhanced.png" class="img me-4"  height="50" width="60">
+        <img src="Tech logo_enhanced.png" class="img me-4" height="50" width="60">
         <button
           class="navbar-toggler"
           type="button"
@@ -49,25 +51,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item btn">
+            <li class="nav-item btn btn-warning">
               <a class="nav-link active" aria-current="page" href="main.html"
-              >Home&#127968</a
-            >
-          </li>
-          <li class="nav-item btn">
-            <a class="nav-link  active" href="wwd.html">What We Do&#128220</a>
-          </li>
-          <li class="nav-item 2 btn">
-            <a class="nav-link 2  active" href="wwr.html">Who We Are&#10067</a>
-          </li>
-            <li class="nav-item 2 btn me-2">
-                <a class="nav-link 2  active" href="cu.html">Contact Us&#128222</a>
-              </li>
-          <span class="nav-item">
-            <a class="nav-link active text-primary" href="Sign_Up.html">Sign Up&#129094</a>
-          </span>
-          <li class="nav-item"></li>
-        </ul>
+                >Home&#127968</a
+              >
+            </li>
+            <li class="nav-item btn btn-outline-warning">
+              <a class="nav-link  active" href="wwd.html">What We Do&#128220</a>
+            </li>
+            <li class="nav-item 2 btn btn-outline-warning">
+              <a class="nav-link 2  active" href="wwr.html">Who We Are&#10067</a>
+            </li>
+              <li class="nav-item 2 btn btn-outline-warning me-2">
+                  <a class="nav-link 2  active" href="cu.html">Contact Us&#128222</a>
+                </li>
+            <span class="nav-item">
+              <a class="nav-link active text-primary" href="Sign_Up.html">Sign Up&#129094</a>
+            </span>
+            <li class="nav-item"></li>
+          </ul>
+
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
@@ -79,11 +82,11 @@
               Search
             </button>
           </form>
-        </div> 
+        </div>
       </div>
     </nav>
     <div class="container text-light my-4">
-  <h1 class="h3 mb-3 font-weight-normal text-light mt-2" style="font-size: 38px;">Please Login to Your Account&#128274</h1>
+  <h1 class="h3 mb-3 font-weight-normal text-light mt-2" style="font-size: 38px; position: absolute; bottom:65%; ">Please Login to Your Account&#128274</h1>
   <form class="col-4">
   <label for="inputEmail" class="sr-only mt-4">Email address</label>
   <input type="email" id="inputEmail" class="form-control" placeholder="Enter Your Email" required="" autofocus="">
