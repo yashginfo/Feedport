@@ -10,6 +10,56 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      body{
+        background-image: url('moon.jpg');
+        background-size: cover;
+        height: 100vh;
+        background-position: center;
+            margin: 0;
+      display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+
+      .signme{
+        font-weight: bold;
+
+        width: 90%;
+            max-width: 450px;
+            margin: 5 auto;
+            text-align: left;
+
+        border-radius: 10px;
+      
+        position: absolute;
+        top: 35%;
+        backdrop-filter: blur(4px);
+
+       }
+
+       @media (max-width: 576px) {
+            .container {
+                bottom: 5%;
+            }
+        }
+  
+        @media(max-width:450px) {
+        h1{
+          font-size: 35px;
+          color: aliceblue;
+        
+        }
+      }
+      @media(min-width:600px) {
+        h1{
+          font-size: 54px;
+          color: aliceblue;
+        
+        }
+      }
+
+    </style>
   </head>
   <body style="background-color: rgb(10, 175, 187)">
     <nav class="navbar fixed-top  navbar navbar-expand-lg navbar-dark bg-dark">
@@ -62,16 +112,16 @@
         </div> 
       </div>
     </nav>
+   
+    <h1  style="position: absolute; top: 20%; left: 3%; color: aliceblue;">Let's Get Start With Sign Up&#128393</h1>
     <div class="container text-light my-4 mt-5 pt-5">
-    <form class="form-signin col-8">
-  
-  <h1 class="h3 mb-3 font-weight-normal text-light mt-2" style="font-size: 45px;">Let's Get Start With Sign Up&#128393</h1>
+      <form class="signme form-signin col-8">
   <label for="inputName" class="sr-only mt-4">Your Full Name</label>
   <input type="text" id="inputName" class="form-control" placeholder="Enter Full Name Here" required="" autofocus="">
   <label for="inputEmail" class="sr-only mt-4">Email address</label>
   <input type="email" id="inputEmail" class="form-control" placeholder="Example name@gmail.com" required="" autofocus="">
   <label for="inputPassword" class="sr-only mt-4">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+  <input type="password" id="inputPassword" class="form-control" placeholder="Enter Password" required="">
   <label for="inputConfirmPassword" class="sr-only mt-4">Confirm Password</label>
   <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Enter Confirm Password" required="">
   <div class="checkbox mb-3 mt-4">
@@ -81,15 +131,6 @@
     </div>
 </body> 
    
-      <footer class="py-3 my-4 ">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="main.html" class="nav-link px-2 text-light">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a></li>
-          <li class="nav-item"><a href="wwr.html" class="nav-link px-2 text-light">About Us</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Terms And Policy</a></li>
-        </ul>
-        <p class="text-center text-light">© 2025 SAY Technologies, Inc</p>
-      </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
