@@ -16,21 +16,49 @@
         background-image: url('beautiful.jpg');
         background-size: cover;
         height: 100vh;
+        background-position: center;
+            margin: 0;
+      display: flex;
+            flex-direction: column;
+            justify-content: center;
        }
 
-       .col-4{
-        height: 40%;
-        width: 35%;
-        position: absolute;
-        top: 40%;
-        color: white;
-  font-weight: bold;
-  border: 1px solid;
-  border-radius: 20px;
-  z-index: 2;
- padding: 5px;
-       }
+       .logme{
+        font-weight: bold;
+
+        width: 90%;
+            max-width: 450px;
+            margin: 5 auto;
+            text-align: left;
+
+        border-radius: 10px;
       
+        position: absolute;
+        top: 35%;
+        backdrop-filter: blur(4px);
+
+       }
+
+       @media (max-width: 576px) {
+            .contact-form-container {
+                bottom: 5%;
+            }
+        }
+  
+        @media(max-width:450px) {
+        h1{
+          font-size: 35px;
+          color: aliceblue;
+        
+        }
+      }
+      @media(min-width:600px) {
+        h1{
+          font-size: 54px;
+          color: aliceblue;
+        
+        }
+      }
 
     </style>
   </head>
@@ -85,9 +113,9 @@
         </div>
       </div>
     </nav>
+    <h1 style="position: absolute; top: 20%; left: 3%; color: aliceblue;">Please Login to Your Account&#128274</h1>
     <div class="container text-light my-4">
-  <h1 class="h3 mb-3 font-weight-normal text-light mt-2" style="font-size: 38px; position: absolute; bottom:65%; ">Please Login to Your Account&#128274</h1>
-  <form class="col-4">
+  <form class="logme">
   <label for="inputEmail" class="sr-only mt-4">Email address</label>
   <input type="email" id="inputEmail" class="form-control" placeholder="Enter Your Email" required="" autofocus="">
   <label for="inputPassword" class="sr-only mt-4">Password</label>
