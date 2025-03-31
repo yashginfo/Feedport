@@ -79,22 +79,22 @@ justify-content: space-evenly;
   <body>
    <p class="stud text-center" style="font-family: 'Times New Roman', Times, serif; color: rgb(254, 119, 9); "><b>Fill Details To Add Teacher&#128195</b></p>
     <div class="container">
-      <form class="row g-3 py-4" action="teacherdata.php" method="post">
+      <form class="row g-3 py-4">
         <div class="col-md-7">
           <label for="inputName" class="form-label">Teacher Name</label>
-          <input type="text" class="form-control" id="inputName" name="name" required="Student Name is required" autofocus="" placeholder="Enter Teacher Name">
+          <input type="text" class="form-control" id="inputName" required="Student Name is required" autofocus="" placeholder="Enter Teacher Name">
         </div>
         <div class="col-md-4">
           <label for="inputNumber" class="form-label">Teacher Contact Number</label>
-          <input type="number" class="form-control" id="inputNumber" name="number" required="Contact Number is required" autofocus="" placeholder="Enter Teacher Contact Number">  
+          <input type="number" class="form-control" id="inputNumber" required="Contact Number is required" autofocus="" placeholder="Enter Teacher Contact Number">  
           </div>
         <div class="col-md-9">
           <label for="inputEmail" class="form-label">Email Address </label>
-          <input type="email" class="form-control" id="inputEmail" name="email" required="Email Address is required" autofocus="" placeholder="Enter Email Address">
+          <input type="email" class="form-control" id="inputEmail" required="Email Address is required" autofocus="" placeholder="Enter Email Address">
         </div>
         <div class="col-md-3">
           <label for="checkGender" class="form-label">Gender</label>
-          <select class="form-select" id="checkGender" name="gender" required="Please select Gender" autofocus="" placeholder="Enter Gender">     
+          <select class="form-select" id="checkGender" required="Please select Gender" autofocus="" placeholder="Enter Gender">     
            <option value="Male">Male</option>
            <option value="Female">Female</option>
            <option value="Other">Other</option>
@@ -102,17 +102,17 @@ justify-content: space-evenly;
         </div>
         <div class="col-md-6">
           <label for="inputQualification" class="form-label">Enter Qualification</label>
-          <input type="text" class="form-control" id="inputQualification" name="qualification" required="Field is required" autofocus="" placeholder="Enter Teacher Qualification">
+          <input type="text" class="form-control" id="inputQualification" required="Field is required" autofocus="" placeholder="Enter Teacher Qualification">
         </div>
         <div class="mb-3">
           <label for="AddressForm" class="form-label">Enter Address</label>
-          <textarea class="form-control" id="AddressForm" name="address" rows="4" placeholder="Enter Teacher Address..." required="Address is required" autofocus=""></textarea>
+          <textarea class="form-control" id="AddressForm" rows="4" placeholder="Enter Teacher Address..." required="Address is required" autofocus=""></textarea>
         </div>
         <div class="add_picture">
           <h1 style="font-family: 'Times New Roman', Times, serif; color:rgb(255, 87, 2);">Upload Teacher Picture</h1>
           <div id="pick"><br>
             <label for="photo">Select Image</label>
-            <input type="file" class="form-control" id="inputGroupFile04" name="image" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
           </div><br>
           <center><button class="btn btn-lg btn-primary btn-block my-2" style="background-color:rgb(8, 199, 148);" type="submit">Submit Data</button></center>
          </div>
