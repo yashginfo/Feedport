@@ -13,54 +13,35 @@
     crossorigin="anonymous"
   />
   <style>
-    .container{
-      position: absolute;
-            top: 75px; 
-            left: 2%;
-      height: 30pc;
-      width: 70pc;
-      border-radius: 25px;
-      color: rgb(255, 251, 0);
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bolder;
-            max-width: 90%;
-            margin: 0 auto;
-            text-align: left;
-  
-          position: absolute;
-          left: 2%;
-          top: 15%;
-          border-radius: 10px;
-
-        }
-
-
+    body{
+     background-image: linear-gradient(to right, rgba(175, 222, 239, 0.9) , rgb(221, 201, 240))
+  }
   </style>
   </head>
   <body>
-   <p class="stud text-center" style="font-size: 55px;  font-family: 'Times New Roman', Times, serif; color: rgb(255, 234, 0); "><b>Fill Details To Add Student&#128195</b></p>
+   <p class="stud text-center" style="font-size: 55px;  font-family: 'Times New Roman', Times, serif; color: rgb(0, 0, 0); "><b>Fill Details To Add Student&#128195</b></p>
     <div class="container">
-      <form class="row g-3 py-4">
+      <form class="row g-3 py-4"  action="studentdata.php" method="post">
         <div class="col-md-7">
           <label for="inputName" class="form-label">Student Name</label>
-          <input type="text" class="form-control" id="inputName" required="Student Name is required" autofocus="" placeholder="Enter Student Name">
+          <input type="text" class="form-control" id="inputName" name="name" required="Student Name is required" autofocus="" placeholder="Enter Student Name">
         </div>
         <div class="col-md-4">
           <label for="inputNumber" class="form-label">Contact Number</label>
-          <input type="number" class="form-control" id="inputNumber" required="Contact Number is required" autofocus="" placeholder="Enter Student Contact Number">  
+          <input type="number" class="form-control" id="inputNumber" name="number" required="Contact Number is required" autofocus="" placeholder="Enter Student Contact Number">  
           </div>
         <div class="col-md-8">
           <label for="inputEmail" class="form-label">Email Address </label>
-          <input type="email" class="form-control" id="inputEmail" required="Email Address is required" autofocus="" placeholder="Student Email Address">
+          <input type="email" class="form-control" id="inputEmail" name="email" required="Email Address is required" autofocus="" placeholder="Student Email Address">
           
         </div>
         <div class="col-md-4">
           <label for="inputParNum" class="form-label">Parents Contact Number</label>
-          <input type="number" class="form-control" id="inputParNum" required="Parents Contact Number is required" autofocus="" placeholder="Student Parents Number">
+          <input type="number" class="form-control" id="inputParNum" name="parents" required="Parents Contact Number is required" autofocus="" placeholder="Student Parents Number">
         </div>
         <div class="col-md-3">
           <label for="ClassYear" class="form-label">BCA (Year)</label>
-          <select class="form-select" id="ClassYear" required="Please select Year" autofocus="" placeholder="Choose Class">
+          <select class="form-select" id="ClassYear" name="class" required="Please select Year" autofocus="" placeholder="Choose Class">
            <option value="1st Year">1st Year</option>
            <option value="2nd Year">2nd Year</option>
            <option value="3rd Year">3rd Year</option>
@@ -68,7 +49,7 @@
         </div>
         <div class="col-md-3">
           <label for="checkGender" class="form-label">Gender</label>
-          <select class="form-select" id="checkGender" required="Please select Gender" autofocus="" placeholder="Select Gender">
+          <select class="form-select" id="checkGender" name="gender" required="Please select Gender" autofocus="" placeholder="Select Gender">
            <option value="Male">Male</option>
            <option value="Female">Female</option>
            <option value="Other">Other</option>
@@ -76,25 +57,24 @@
         </div>
         <div class="col-md-3">
           <label for="checkCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="checkCity" required="Field is required" autofocus="" placeholder="Ente City">
+          <input type="text" class="form-control" id="checkCity" name="city" required="Field is required" autofocus="" placeholder="Ente City">
         </div>
         <div class="col-md-3">
           <label for="checkState" class="form-label">State</label>
-          <input type="text" class="form-control" id="checkState" required="Field is required" autofocus="" placeholder="Ente State">
+          <input type="text" class="form-control" id="checkState" name="state" required="Field is required" autofocus="" placeholder="Ente State">
         </div>
         <div class="mb-3">
           <label for="AddressForm" class="form-label">Student Address</label>
-          <textarea class="form-control" id="AddressForm" rows="6" placeholder="Enter Student Address..." required="Address is required" autofocus=""></textarea>
+          <textarea class="form-control" id="AddressForm" name="address" rows="6" placeholder="Enter Student Address..." required="Address is required" autofocus=""></textarea>
         </div>
         <div class="add_picture">
           <h1 style="font-family: 'Times New Roman', Times, serif; color:rgb(255, 147, 6);">Upload Student Picture</h1>
           <div id="pick"><br>
-            <label for="photo">Select Image</label>
-            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-          </div><br>
+            <label for="photo">Student Image URL</label>
+            <input type="text" class="form-control" id="photo" name="image" required="Field is required" autofocus="" placeholder="Enter URL">
          <center><button class="btn btn-lg btn-primary btn-block my-2" style="background-color:rgb(135, 8, 185);" type="submit">Submit Data</button></center>
          </div>
-
+      </form>
 
     </div>        
 
