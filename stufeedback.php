@@ -1,3 +1,13 @@
+<?php
+session_start();
+$smail = $_SESSION["email"];
+
+
+$email = $_GET['email'];
+$name = $_GET['name'];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +29,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">TES</a>
+          <a class="navbar-brand" href="#">JustSAY</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,6 +42,9 @@
                
               <li class="nav-item">
                 <a class="nav-link" href="sfeedback.php">Teacher Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
               </li>
                
             </ul>
@@ -46,21 +59,21 @@
 
 <div class="mb-3">
   <label for="Inputname" class="form-label">Student Name</label>
-  <input type="text" class="form-control " id="Inputname" name="name" placeholder="Enter Student Name">
+  <input type="text" class="form-control " id="Inputname" name="name" value="<?php echo $name; ?>" Readonly>
 </div>
 
 <div class="mb-3">
   <label for="Inputemail" class="form-label">Student Email address</label>
-  <input type="email" class="form-control" id="Inputemail" name="email" placeholder="name@example.com">
+  <input type="email" class="form-control" id="Inputemail" name="email" value="<?php echo $email; ?>" Readonly>
 </div>
 <div class="mb-3">
   <label for="Textarea1" class="form-label">Enter Your Feedback</label>
-  <textarea class="form-control" id="Textarea1" name="feedback" rows="6"></textarea>
+  <textarea class="form-control" id="Textarea1" name="feedback" rows="6" required="" autofocus=""></textarea>
 </div>
 
 <div class="mb-3">
   <label for="givenfeedback" class="form-label">Feedback given by</label>
-  <input type="text" class="form-control" id="givenfeedback" name="givenby" placeholder="Your Name">
+  <input type="text" class="form-control" id="givenfeedback" name="givenby" value="<?php echo $smail; ?>" Readonly>
 </div>
 
 <button class="btn btn-danger">Send Feedback</button>

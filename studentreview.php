@@ -1,3 +1,9 @@
+<?php
+session_start();
+$smail = $_SESSION["email"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,14 +42,23 @@
               <li class="nav-item">
                 <a class="nav-link" href="tfeedback.php">Give Feedback</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reviewstudent.php">View Feedback</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li>
                
             </ul>
           </div>
         </div>
       </nav>
-    <br><br><br><br><br><br><br><br><br>
+      <center><br><br><br><br><br>
+     <h1 style="font-family: Times new roman;font-size: 75px;"> User <?php echo $smail; ?> </h1></center>
+    <br>
 
-  <marquee scrollamount="25"><h1 style="color: black; font-family:Times new roman; text-align:center; font-size: 120px;">Welcome To Student Feedback Portal</h1></marquee>
+  <marquee scrollamount="25"><h1 style="color: black; font-family:Times new roman; text-align:center; font-size: 120px;">Welcome To Student Feedback Portal</h1></marquee><br><br>
   <p style="text-align:center ; font-family: Times new roman;font-size: 40px; color: black; ">Have A Nice day&#128498</p>
   
 </body>

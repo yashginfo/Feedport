@@ -4,9 +4,12 @@
 
 <?php
  
+session_start();
+
  $temail = $_POST["temail"];
  $tpassword = $_POST["tpassword"];
 
+$_SESSION["email"] = $temail;
 //  echo $email; 
 //  echo "<br>";
 //  echo $password;
@@ -28,16 +31,16 @@ $data = $conn->query($sql);
 if ($data->num_rows>0) {
 	while ($row = $data->fetch_assoc()) {
 		if ($tpassword ==  $row["tpassword"]) {
-		 	echo "password matched";
+		 	"password matched";
 			 header('Location: teacherreview.php');
 		 }
-		 else echo "Wrong Password ";
-         header('Refresh: 2; URL=teacherlog.html');
+		 else "Wrong Password ";
+         header('Refresh: 1; URL=teacherlog.html');
 	}
 
 } else {
-	echo " Email does not matched: Error[404]".$conn->error;
-	header('Refresh: 2; URL=teacherlog.html');
+	" Email does not matched: Error[404]".$conn->error;
+	header('Refresh: 1; URL=teacherlog.html');
 }
 
 $conn->close();

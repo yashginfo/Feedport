@@ -44,11 +44,15 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="tfeedback.php">Teacher Feedback</a>
+                <a class="nav-link" href="disptechr.php">View Teacher Feedback</a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="sfeedback.php">Student Feedback</a>
+                <a class="nav-link" href="dispstur.php">View Student Feedback</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
               </li>
 
             </ul>

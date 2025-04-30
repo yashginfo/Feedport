@@ -45,18 +45,22 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="tfeedback.php">Teacher Feedback</a>
+                <a class="nav-link" href="disptechr.php">View Teacher Feedback</a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="sfeedback.php">Student Feedback</a>
+                <a class="nav-link" href="dispstur.php">View Student Feedback</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
               </li>
 
             </ul>
           </div>
         </div>
       </nav>
-      <br><br>
+      <br>
       <div class="card">
         <div class="card-header">
           Teachers Records
@@ -69,7 +73,7 @@
           <a href="teachercart.php" class="btn btn-danger">Show Teachers</a>
         </div>
       </div>
-      <br><br>
+      <br>
       <div class="card">
         <div class="card-header">
            Students Records
@@ -81,7 +85,7 @@
           <a href="Student.html" class="btn btn-primary">Add Students</a>
           <a href="studentrow.php" class="btn btn-danger">Show Students</a>
         </div></div>
-        <br><br>
+        <br>
       <div class="card">
         <div class="card-header">
         Login Records

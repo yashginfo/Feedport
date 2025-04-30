@@ -1,3 +1,8 @@
+<?php
+session_start();
+$smail = $_SESSION["email"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,13 +41,17 @@
               <li class="nav-item">
                 <a class="nav-link active" href="tfeedback.php">Teacher Feedback</a>
               </li>
-               
+              
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
+      <center>
+     <h4 style="font-family: Times new roman;font-size: 50px;">Welcome User <?php echo $smail; ?>  </h4></center>
 
-      <br><br>
     <div class="card-container">
       <?php
       include("connect.php");
@@ -63,7 +72,7 @@
           <p class="card-info">Qualification : <?php echo $row["qualification"]; ?></p>
           <p class="card-info">Email : <?php echo $row["email"]; ?></p>
           <p class="card-info">Gender : <?php echo $row["gender"]; ?></p>
-          <td> <button class="btn btn-block btn-warning" onclick="window.location.href = 'teafeedback.php?email=<?php echo $row['email']; ?>';">Give Feedback</button></td>
+          <td> <button class="btn btn-block btn-warning" onclick="window.location.href = 'teafeedback.php?email=<?php echo $row['email'];?>&name=<?php echo $row['name'];?>';">Give Feedback</button></td>
          
         </div>
       </div>

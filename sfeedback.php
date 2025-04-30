@@ -1,3 +1,9 @@
+<?php
+session_start();
+$smail = $_SESSION["email"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,13 +39,16 @@
                
               <li class="nav-item">
                 <a class="nav-link active" href="sfeedback.php">Give Feedback</a>
-              </li>              
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li>
+
             </ul>
           </div>
         </div>
       </nav>
       
-   
       <table class="table table-striped">
   <thead>
     <tr>
@@ -81,7 +90,7 @@ if ($result->num_rows > 0) {
       <td> <?php echo $row["class"]; ?> </td>
       <td> <?php echo $row["address"]; ?> </td>
       <td> <?php echo $row["city"]; ?> </td>
-      <td> <button class="btn btn-block btn-info" onclick="window.location.href = 'stufeedback.php?email=<?php echo $row['email']; ?>';">Give Feedback</button></td>
+      <td> <button class="btn btn-block btn-info" onclick="window.location.href = 'stufeedback.php?email=<?php echo $row['email']; ?>&name=<?php echo $row['name']; ?>';">Give Feedback</button></td>
     </tr>
 
     <?php

@@ -1,3 +1,8 @@
+<?php
+session_start();
+$smail = $_SESSION["email"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +39,13 @@
                 <a class="nav-link" href="sfeedback.php">Give Feedback</a>
               </li>
                
+              <a class="nav-link" href="reviewteacher.php">My Reviews</a>
+             
+
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -41,9 +53,10 @@
 
 <br><br><br><br><br><br><br><br>
 
-
-  <h1 class="neon-text" style="text-align:center;font-weight:bold; font-size: 85px; font-family: 'Times New Roman', Times, serif;">Welcome To Teacher Feedback Page</h1>
-
+<h1 class="neon-text" style="text-align:center;font-weight:bold; font-size: 65px; font-family: 'Times New Roman', Times, serif;">User <?php echo $smail; ?></h1>
+<br>
+  <h1 class="neon-text" style="text-align:center;font-weight:bold; font-size: 85px; font-family: 'Times New Roman', Times, serif;">Welcome To Teacher Feedback Page</h1><br><br>
+ 
     
 </body>
 </html>
